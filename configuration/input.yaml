@@ -1,0 +1,18 @@
+---
+project_id: "seed-423789"
+prefix: "storage"
+names: ["anto","general"]
+folders:
+  anto: ["/documents","/private/anto"]
+  general: ["/docs","/public/general"]
+bucket_policy_only:
+  anto: true
+  general: false
+force_destroy: false
+lifecycle_rules:
+  - action:
+      type: "SetStorageClass"
+      storage_class: "NEARLINE"
+    condition:
+      age: "10"
+      matches_storage_class: "MULTI_REGIONAL,STANDARD,DURABLE_REDUCED_AVAILABILITY"
