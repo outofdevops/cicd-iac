@@ -1,0 +1,9 @@
+provider_installation {
+  filesystem_mirror {
+    path    = "/mirrors"
+    include = ["hashicorp/google","hashicorp/random"]
+  }
+  direct {
+    exclude = ["hashicorp/google","hashicorp/random"]
+  }
+}
