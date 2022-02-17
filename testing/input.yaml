@@ -8,7 +8,7 @@ folders:
 bucket_policy_only:
   anto: true
   general: false
-force_destroy: false
+force_destroy: true
 lifecycle_rules:
   - action:
       type: "SetStorageClass"
